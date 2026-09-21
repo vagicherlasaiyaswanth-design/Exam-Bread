@@ -498,8 +498,9 @@ if "plan_df" in st.session_state:
         mime="text/plain"
     )
 
-for day, topic in plan.items():
-
-    st.write(
-        f"**{day}:** {topic}"
-    )
+st.download_button(
+    label="⬇️ Download Report",
+    data=report_text,
+    file_name="exam_bread_report.txt",
+    mime="text/plain"
+)        
